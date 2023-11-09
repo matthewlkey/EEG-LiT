@@ -1,4 +1,5 @@
-# EEG-LiT
+# EEG cLustered augmented vIsion Transformer (EEG-LiT)
+
 
 This code is modified from [EEGViT](https://github.com/ruiqiRichard/EEGViT)
 
