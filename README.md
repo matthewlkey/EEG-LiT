@@ -3,9 +3,11 @@
 This code is modified from [EEGViT](https://github.com/ruiqiRichard/EEGViT)
 
 Training Results 
+
 <img width="466" alt="image" src="https://github.com/matthewlkey/EEG-LiT/assets/1072856/05c5e275-f720-4668-aeee-8d1dbdaf8914">
 
 Visualization of Test Error
+
 <img width="752" alt="image" src="https://github.com/matthewlkey/EEG-LiT/assets/1072856/dddc432e-423b-4cbf-adfe-a09e1be5d5f2">
 
 ## Requirements
