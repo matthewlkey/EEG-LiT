@@ -1,6 +1,6 @@
 # EEG cLustered augmented vIsion Transformer (EEG-LiT)
 
-Before you begin, ensure you meet the following requirements:
+## Prerequisites
 
 1. **Google Colab Environment**: This script is designed to run in a Google Colab environment. 
 2. **Google Drive Storage**: At least 10.40 GB of free space is needed in your Google Drive to store the dataset.
@@ -9,7 +9,62 @@ Before you begin, ensure you meet the following requirements:
 ## Code Implementation Reference
 The code implementation in this project includes references to the [EEGViT repository](https://github.com/ruiqiRichard/EEGViT). Specific portions of the code, as presented in the `EEG-LiT.ipynb` file, are based on or adapted from this repository.
 
+## Installing Requirements
 
+To set up the necessary environment for this project, run the following commands in your Python environment:
+
+```bash
+!pip install transformers
+!pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu117
+!pip install pandas
+!pip install numpy
+!pip install scipy
+!pip install tqdm
+```
+
+# Data Download Guide for EEGViT Dataset
+
+This guide provides step-by-step instructions on how to download the EEGViT dataset in a Google Colab environment.
+
+
+## Steps for Data Download
+
+1. **Choose the Dataset**: 
+   First, select the dataset you want to download. This can be done by setting the `dataset_name` variable. Available datasets include:
+   - 'Position_task_with_dots_synchronised_min'
+   - 'Position_task_with_dots_synchronised_max'
+   - 'Position_task_with_dots_synchronised_min_hilbert'
+   - 'LR_task_with_antisaccade_synchronised_min'
+
+   Choose the following options:
+   ```python
+   dataset_name = 'Position_task_with_dots_synchronised_min'
+
+2. **Mount Google Drive**:
+   To store the dataset, mount your Google Drive in the Colab environment using the following commands:
+   ```python
+   from google.colab import drive
+   drive.mount('/content/drive')
+
+3. **Set File Directory**:
+   Define the directory where the dataset will be stored. By default, it uses the EEGViT_DATA folder in your Google Drive:
+   ```python
+   file_dir = '/content/drive/MyDrive/EEGViT_DATA/'.
+
+4. **Download the Dataset:**:
+   The script checks if the dataset already exists in the specified directory. If not, it creates the directory and downloads the dataset.
+   ```python
+   
+   import os
+  
+   if not os.path.exists(f'{file_dir}{dataset_name}.npz'):
+     !mkdir -p {file_dir}
+     !wget -P {file_dir} https://files.osf.io/v1/resources/ktv7m/providers/dropbox/prepared/{dataset_name}.npz
+
+### Post-Download
+After the download is complete, the dataset will be available in the specified `file_dir` on your Google Drive, ready for use in your projects.
+
+## Results Overview
 Training Results 
 
 <img width="466" alt="image" src="images/training.png">
@@ -38,20 +93,5 @@ Our model achieves the following performance on :
 |       EEG-LiT      |       52.1      |
 
 
-## Contributing
-Fork the Repository: Create a copy of their repository in your own GitHub account by using the "Fork" button on the original repository's GitHub page.
 
-Clone Your Fork: Clone the forked repository to your local machine using git clone [URL of your forked repository].
-
-Create a New Branch: Navigate into the cloned directory and create a new branch for your changes using git checkout -b [new-branch-name].
-
-Make Your Changes: Work on the changes you want to contribute. This could involve editing files, adding new files, or fixing bugs.
-
-Commit Your Changes: Commit your changes using git add . to add all the changes, then git commit -m "Your commit message" to commit with a message explaining what you've done.
-
-Push to Your Fork: Push your new branch and changes to your fork on GitHub using git push origin [new-branch-name].
-
-Create a Pull Request: Go to the original repository on GitHub, and you should see a prompt to create a pull request from your new branch. Fill out the form to explain your changes, and submit the pull request.
-
-Respond to Feedback: The repository owner might ask you to make some changes before they merge your pull request. Be prepared to respond to feedback and update your pull request if necessary.
 >📋  MIT License
