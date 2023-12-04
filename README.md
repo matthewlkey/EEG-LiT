@@ -84,13 +84,33 @@ Google Colab
 
 ## Results
 
-Our model achieves the following performance on :
+As illustrated in table 1, the pinnacle achievement on the EEGEyeNet dataset’s absolute position task prior to our re-sults was RMSE of **55.4 ± 0.2**
+
+From our analysis, we observed a trend of decreasing RMSE values with advanced pre-training techniques using clustered and augmented data. The 'EEGVIT Pre-trained with Augmented Data' model demonstrated an RMSE of 54.95 mm, indicating the positive impact of data augmentation on model accuracy. Further enhancements in pre-training techniques are evident in the 'EEGVIT Pre-trained with Clustered Data' model, which achieved an RMSE of 52.98 mm.
+
+The 'EEGVIT Pre-trained with Clustered and Augment Data' model, which combines both clustered and augmented data techniques in its pre-training, achieved an even lower RMSE of **52.24 mm**, reinforcing the efficacy of these combined strategies.
+
+However, when scaling the model up to 'EEGVIT large Pre-trained with Clustered and Augment Data', the RMSE marginally increased to 52.28 mm. This suggests that while pre-training with clustered and augmented data does improve the model accuracy, the transition to a larger model variant does not necessarily confer a significant advantage in this context, and could indicate that the benefits of scaling up the model size have a threshold beyond which no substantial accuracy gains are observed.:
 
 ### [EEGEyeNet Absolute Position ](https://arxiv.org/abs/2111.05100)
 
-|      Model name    |       RMSE      | 
-| ------------------ |---------------- | 
-|       EEG-LiT      |       52.1      |
+| Model                                 | Absolute Position RMSE (mm) |
+|---------------------------------------|-----------------------------|
+| Naive Guessing                        | 123.3 ± 0.0                 |
+| CNN                                   | 70.4 ± 1.1                  |
+| PyramidalCNN                          | 73.9 ± 1.9                  |
+| EEGNet                                | 81.3 ± 1.0                  |
+| InceptionTime                         | 70.7 ± 0.8                  |
+| Xception                              | 78.7 ± 1.6                  |
+| VIT - Base                            | 61.5 ± 0.6                  |
+| VIT - Base Pre-trained                | 58.1 ± 0.6                  |
+| EEGVIT                                | 61.7 ± 0.6                  |
+| EEGVIT Pre - trained                  | 55.4 ± 0.2                  |
+| EEGVIT Pre - trained with Augmented Data | 54.95                     |
+| EEGVIT Pre - trained with Clustered Data | 52.98                     |
+| EEGVIT Pre - trained with Clustered and Augment Data | 52.24         |
+| EEGVIT large Pre - trained with Clustered and Augment Data | 52.28   |
+
 
 
 
