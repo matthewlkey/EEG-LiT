@@ -4,7 +4,7 @@
 
 1. **Google Colab Environment**: This script is designed to run in a Google Colab environment. 
 2. **Google Drive Storage**: At least 10.40 GB of free space is needed in your Google Drive to store the dataset.
-3. **Google Colab GPU**: A V100 GPU is recommended in Google Colab to reproduce the results accurately.
+3. **Google Colab GPU**: At least V100 GPU is recommended in Google Colab to reproduce the results accurately.
 
 ## Code Implementation Reference
 The code implementation in this project includes references to the [EEGViT repository](https://github.com/ruiqiRichard/EEGViT). Specific portions of the code, as presented in the `EEG-LiT.ipynb` file, are based on or adapted from this repository.
