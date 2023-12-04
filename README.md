@@ -64,7 +64,17 @@ This guide provides step-by-step instructions on how to download the EEGViT data
 ### Post-Download
 After the download is complete, the dataset will be available in the specified `file_dir` on your Google Drive, ready for use in your projects.
 
-## Results Overview
+
+# EEG-LiT Model Replication Guide
+
+Please note that the `EEG-LiT.ipynb` notebook contains all necessary requirements and configurations for replicating the results presented. To replicate the results, simply follow the instructions provided within the notebook.
+
+### Step 1 - Open EEG-LiT.ipynb in Google Collab
+
+### Step 2 - Click Runtime > Run All
+<img width="990" alt="Screen Shot 2023-11-08 at 6 19 30 PM" src="images/colab.png"> 
+
+## Results Visualisation
 Training Results 
 
 <img width="466" alt="image" src="images/training.png">
@@ -73,14 +83,6 @@ Visualization of Test Error
 
 <img width="752" alt="image" src="images/test-error.png">
 
-## Requirements
-Google Colab
-
-## How to Run
-### Step 1 - Open EEG-LiT.ipynb in Google Collab
-
-### Step 2 - Click Runtime > Run All
-<img width="990" alt="Screen Shot 2023-11-08 at 6 19 30 PM" src="images/colab.png"> 
 
 ## Results
 
