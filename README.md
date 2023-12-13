@@ -1,5 +1,7 @@
 # EEG cLustered augmented vIsion Transformer (EEG-LiT)
 
+In the realm of EEG-based gaze prediction, leveraging deep learning to interpret complex neural data presents significant challenges. This study interrogates the efficacy of Vision Transformers (ViTs) in this context, with a focus on **pre-processing enhancements and model scaling**. Specifically, we introduce the **EEG augmented cLustered vIsion Transformer (EEG-LIT)**, an innovative approach that incorporates pre-processing, data augmentation, and model scaling techniques. The EEG-LIT model, particularly when pre-trained with clustered and augmented data, has achieved better results, setting a **new benchmark with an RMSE of 52.24 mm**. This result highlights the potential of tailored pre-processing and augmentation in advancing EEG-based applications.
+
 ## Prerequisites
 
 1. **Google Colab Environment**: This script is designed to run in a Google Colab environment. 
@@ -112,10 +114,7 @@ However, when scaling the model up to 'EEGVIT large Pre-trained with Clustered a
 | EEGVIT Pre - trained                  | 55.4 ± 0.2                  |
 | EEGVIT Pre - trained with Augmented Data | 54.95                     |
 | EEGVIT Pre - trained with Clustered Data | 52.98                     |
-| EEGVIT Pre - trained with Clustered and Augment Data | 52.24         |
+| **EEGVIT Pre - trained with Clustered and Augment Data (EEG-LIT)** | **52.24**         |
 | EEGVIT large Pre - trained with Clustered and Augment Data | 52.28   |
 
 
-
-
->📋  MIT License
